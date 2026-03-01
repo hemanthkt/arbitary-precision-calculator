@@ -27,6 +27,7 @@ int main(int argc, char *argv[])
 			return FAILURE;
 		}
 	}
+
 	// Create 2 lists of operands
 	int len1 = strlen(argv[1]);
 	int len2 = strlen(argv[3]);
@@ -46,6 +47,9 @@ int main(int argc, char *argv[])
 
 	// Remove pre zeros
 
+	remove_pre_zeros(&head1);
+	remove_pre_zeros(&head2);
+
 	char oper = argv[2][0];
 
 	switch (oper)
@@ -56,6 +60,21 @@ int main(int argc, char *argv[])
 		break;
 
 	case '-':
+		if (compare_list(head1, head2) == OPERAND1)
+		{
+			subtraction(tail1, tail2, &headR, &tailR);
+			print_list(headR);
+		}
+
+		else if (compare_list(head1, head2) == OPERAND2)
+		{
+
+			subtraction(tail2, tail1, &headR, &tailR);
+			printf("-");
+			print_list(headR);
+		}
+		else
+			printf("0\n");
 		break;
 
 	case 'x':
