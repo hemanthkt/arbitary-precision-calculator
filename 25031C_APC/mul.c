@@ -48,4 +48,9 @@ void multiplication(node *tail1, node *tail2, node **headR, node **tailR)
         temp1 = tail1;
         count++;
     }
+
+    if (carry == 1)
+    {
+        insert_first(headR, tailR, 1);
+    }
 }
