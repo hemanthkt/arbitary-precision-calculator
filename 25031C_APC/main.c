@@ -79,6 +79,8 @@ int main(int argc, char *argv[])
 
 	case 'x':
 	case 'X':
+		multiplication(tail1, tail2, &headR, &tailR);
+		print_list(headR);
 		break;
 
 	case '/':

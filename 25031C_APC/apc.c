@@ -65,6 +65,27 @@ void print_list(node *head)
     }
 }
 
+int delete_list(node **head, node **tail)
+{
+    if (*head == NULL)
+    {
+        return FAILURE;
+    }
+
+    node *temp;
+
+    while (*head != NULL)
+    {
+        temp = *head;
+        *head = (*head)->next;
+        free(temp);
+    }
+
+    *tail = NULL;
+
+    return SUCCESS;
+}
+
 void remove_pre_zeros(node **head)
 {
     node *temp = *head;
