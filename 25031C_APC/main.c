@@ -84,6 +84,8 @@ int main(int argc, char *argv[])
 		break;
 
 	case '/':
+		division(head1, head2, tail2, &headR, &tailR);
+		print_list(headR);
 		break;
 
 	default:
