@@ -27,6 +27,7 @@ void division(node *headL1, node *head_OPR2, node *tail_OPR2, node **headR, node
 
 int cla_validation(int argc, char *argv[]);
 void create_list(char *opr, node **head, node **tail);
+int operation_checker(char *argv1, char *argv2);
 
 int insert_first(node **head, node **tail, int data);
 int insert_last(node **head, node **tail, int data);

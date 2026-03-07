@@ -2,6 +2,12 @@
 
 // Function definitions
 
+// check the operation
+int operation_checker(char *argv1, char *argv2)
+{
+    
+}
+
 // function to insert nodes to the last
 int insert_last(node **head, node **tail, int data)
 {
